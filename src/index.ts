@@ -114,8 +114,8 @@ Bun.serve({
           download = firstItem.dlink;
           thumbs = firstItem.thumbs;
           console.log("[CHECK] File found:", Boolean(firstItem));
-console.log("[CHECK] Download field exists:", Boolean(firstItem.dlink));
-console.log("[CHECK] Available fields:", Object.keys(firstItem));
+          console.log("[CHECK] Download field exists:", Boolean(firstItem.dlink));
+          console.log("[CHECK] Available fields:", Object.keys(firstItem));
         }
 
         return Response.json(
