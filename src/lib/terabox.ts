@@ -19,7 +19,6 @@ export async function tera(surl: string): Promise<any> {
 
   const first_url = `https://dm.terabox.app/sharing/link?surl=${surl}`;
   console.log("[DEBUG] Fetching first_url:", first_url);
-  console.log("[DEBUG] First request headers:", headers);
 
   try {
     const response = await fetch(first_url, { headers });
@@ -56,8 +55,6 @@ export async function tera(surl: string): Promise<any> {
       Cookie: cookieString,
     };
 
-    console.log("[DEBUG] Fetching api_url:", api_url.toString());
-    console.log("[DEBUG] API headers:", api_headers);
 
     const api_response = await fetch(api_url.toString(), {
       headers: api_headers,
