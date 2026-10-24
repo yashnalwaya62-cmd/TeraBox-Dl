@@ -8,7 +8,6 @@ export async function tera(surl: string): Promise<any> {
 
   const cookies = loadCookies();
   let ndusCookie = cookies["ndus"];
-  console.log("[DEBUG] Loaded ndus cookie:", ndusCookie);
 
   const cookieString = `ndus=${ndusCookie}`;
 
@@ -37,7 +36,6 @@ export async function tera(surl: string): Promise<any> {
       };
     }
     const jsToken = match[1];
-    console.log("[DEBUG] Extracted jsToken:", jsToken);
 
     const api_url = new URL("https://dm.terabox.app/share/list");
     api_url.searchParams.append("app_id", "250528");
